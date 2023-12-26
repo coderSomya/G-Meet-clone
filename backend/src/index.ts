@@ -15,6 +15,7 @@ app.use(cors({
 }));
 app.use(morgan('common'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(errorHandler);
 app.get('/home', (req, res) => {
     return res.send("<h1>Home</h1>");
